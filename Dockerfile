@@ -24,11 +24,7 @@ ENV    DEBIAN_FRONTEND noninteractive
 
 RUN    apt-get --yes update; apt-get --yes upgrade; apt-get --yes install software-properties-common
 
-#RUN	   apt-get --yes install curl openjdk-7-jre-headless
-
-RUN    echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections  && \
-       echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections  && \
-       apt-get --yes install curl oracle-java7-installer
+RUN	   apt-get --yes install curl openjdk-7-jre-headless
 
 ADD    ./minecraft/server.properties /usr/local/etc/minecraft/
 ADD    ./minecraft/craftbukkit-1.7.2-R0.3.jar /usr/local/etc/minecraft/
