@@ -1,4 +1,3 @@
-#
 #FROM   ubuntu:14.04
 #
 #ENV    DEBIAN_FRONTEND noninteractive
@@ -16,6 +15,7 @@
 #expose 25565
 #volume ["/data"]
 #cmd    ["/start"]
+#
 #
 #
 FROM   ubuntu:14.04
