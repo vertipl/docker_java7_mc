@@ -31,19 +31,6 @@ RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true 
 
 RUN apt-get install oracle-java7-installer
 
-
-
-
-
-
-
-
-
-
-
-
-RUN apt-get --yes install curl oracle-java7-installer
-
 ADD    ./minecraft/server.properties /usr/local/etc/minecraft/
 ADD    ./minecraft/craftbukkit-1.7.2-R0.3.jar /usr/local/etc/minecraft/
 ADD    ./scripts/start /start
