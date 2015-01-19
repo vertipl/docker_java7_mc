@@ -5,6 +5,7 @@ ENV    DEBIAN_FRONTEND noninteractive
 RUN    apt-get --yes update; apt-get --yes upgrade; apt-get --yes install software-properties-common
 
 # Install Java.
+
 #RUN \
 #  apt-get update && \
 #  apt-get install --yes openjdk-7-jre && \
