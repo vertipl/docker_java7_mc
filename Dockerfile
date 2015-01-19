@@ -9,13 +9,15 @@ RUN \
   apt-get update && \
   apt-get install --yes openjdk-7-jre && \
   rm -rf /var/lib/apt/lists/*
+
+#ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
   
 #RUN \
 #  apt-get update && \
 #  apt-get install --yes oracle-java7-installer
 #  rm -rf /var/lib/apt/lists/*
-  
-  
+ 
+#ENV JAVA_HOME /usr/lib/jvm/java-7-oracle  
 
 ADD    ./minecraft/server.properties /usr/local/etc/minecraft/
 ADD    ./minecraft/craftbukkit-1.7.2-R0.3.jar /usr/local/etc/minecraft/
