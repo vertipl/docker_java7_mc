@@ -1,8 +1,14 @@
-FROM   dockerfile/java:oracle-java7
+FROM   ubuntu:14.04
 
 ENV    DEBIAN_FRONTEND noninteractive
 
 RUN    apt-get --yes update; apt-get --yes upgrade; apt-get --yes install software-properties-common
+
+# Install Java.
+RUN \
+  apt-get update && \
+  apt-get install --yes openjdk-7-jre && \
+  rm -rf /var/lib/apt/lists/*
 
 ADD    ./minecraft/server.properties /usr/local/etc/minecraft/
 ADD    ./minecraft/craftbukkit-1.7.2-R0.3.jar /usr/local/etc/minecraft/
